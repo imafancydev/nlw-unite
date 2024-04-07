@@ -1,0 +1,35 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": "Novo evento 2",
+  "details": null,
+  "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/63e6bada-80b3-47a5-af45-ec15a88cda51/attendees
+Content-Type: application/json
+
+{
+  "name": "Lucas Leão",
+  "email": "lucasleao23@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/63e6bada-80b3-47a5-af45-ec15a88cda51
+
+
+###
+
+GET http://localhost:3333/attendees/3/badge
+
+###
+
+GET http://localhost:3333/attendees/2/check-in
+
+###
+
+GET http://localhost:3333/events/63e6bada-80b3-47a5-af45-ec15a88cda51/attendees?query=carlos         
